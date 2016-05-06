@@ -2,6 +2,16 @@
   <br>
   <img src='<%= @image %>'>
 
-  <h1>Hey <%= @names %>! Get back to work!</h1>
+  <h1>Hey <span class="names"><%= @names %></span>, get back to work!</h1>
 
 </center>
+
+<style>
+  h1 {
+    font-family: Sans-Serif;
+  }
+
+  .names {
+    color: rgb(243,101,35);
+  }
+</style>
