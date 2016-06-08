@@ -1,8 +1,16 @@
 <center>
-  <br>
-  <img src='<%= @image %>'>
+  <h1>Hey <span class="names"><%= @names %></span>,
 
-  <h1>Hey <span class="names"><%= @names %></span>, get back to work!</h1>
+  <% if @success %>
+    your task succeeded.</h1>
+  <% else %>
+    your task failed.</h1>
+  <% end %>
+
+
+    <img src='<%= @image %>'>
+
+  <h1>Now get back to work!</h1>
 
 </center>
 
