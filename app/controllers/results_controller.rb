@@ -7,13 +7,13 @@ class ResultsController < ApplicationController
 
   def cat_fail
     @names = params[:message] || 'human'
-    @image = 'http://goo.gl/XxuaWA'
+    @image = 'https://goo.gl/9WtN3C'
     render :results
   end
 
   def default_success
     @names = params[:message] || 'human'
-    @image = 'https://goo.gl/haz4z1'
+    @image = 'https://goo.gl/oCiZ2t'
     render :results
   end
 
@@ -21,5 +21,9 @@ class ResultsController < ApplicationController
     @names = params[:message] || 'human'
     @image = 'https://goo.gl/Cg40iF'
     render :results
+  end
+
+  def success?
+    @success = request.path.include?('success')
   end
 end
